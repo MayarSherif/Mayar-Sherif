@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    font-size: 20px;
+    color: grey;
+    font-family: calibri;
+    text-align: left;
+}
+h1{
+    font-family:Calibri;
+    font-size:55px;
+    color:rgb(21, 43, 43);
+}
+h2{
+    font-family: calibri;
+    color:rgb(21, 43, 43);
+    text-align: left;
+    margin-left: 20px;
+    font-size: 20px;
+}
+.head{
+    width: 100%;
+    height: 50px;
+    margin: auto;
+    justify-content: space-evenly;
+}
+header{
+    display : flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.menu{
+    padding : 1em;
+}
+.menu a{
+    text-decoration: none;
+    margin-right : 2em;
+    margin-left : 2em;
+    color : rgb(21, 43, 43);
+    font-family: calibri;
+}
+.icon{
+    border-right : 2px solid lightgrey;
+    padding-right : 2em;
+    margin-left : 5em;
+}
+.nav img:hover{
+    background-color:lightgray;
+    border-radius: 1mm;
+}
+.nav{
+    padding-right : 5em;
+    margin : 1em;
+    border-left : 2px solid lightgrey;
+}
+.nav img{
+    margin : 0.5em;
+    margin-left : 2em;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+   }
+.food{
+    margin-right: 0px;
+    width: 300px;
+    height: 450px;
+    float: right;
+}
+.banner{
+    background-color:antiquewhite;
+    /* background-color : rgb(252,239,220); */
+    width : 100%;
+    padding : 3em 0em 3em 0em;
+    display : flex;
+    justify-content: space-evenly;
+}
+.brand{
+    width: 400px;
+    /* float: left; */
+    margin-left: 0px;
+    height: 70px;
+    margin-top: 50px;
+}
+.brandsbar h2{
+    text-align: center;
+    padding-top: 30px;
+}
+.brandsbar img{
+    margin-left: 200px;
+    padding-top: 25px;
+}
+.subscription{
+    /* background-color : rgb(252,239,220); */
+    width : 100%;
+    padding : 3em 0em 3em 0em;
+    display : flex;
+    justify-content: space-evenly;
+}
+.cat{
+    margin-right: 0px;
+    width: 500px;
+    height: 450px;
+    float: right;
+}
+.description{
+    width: 400px;
+    /* float: left; */
+    margin-left: 0px;
+    height: 70px;
+    margin-top: 125px;
+    margin-left: 100px;
+}
+.description h1{
+    font-size: 51px;
+    
+}
+button{
+    background-color: rgb(6, 12, 12);
+    border-radius: 50mm;
+    color: white;
+    font-family: calibri;
+    font-weight: bold;
+    font-size: 5mm;
+    width: 150px;
+    height: 50px;
+    margin-top: 30px;
+}
+.steps{
+    text-align: center;
+    width: 100%;
+    margin-left: 100px;
+}
+.step{
+    white-space: nowrap;
+    max-width: 1200px;
+    /* margin-top: 50px; */
+    text-align: center;
+    margin-left: 50px;
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width : 100%;
+    /* margin : 1em; */
+  }
+.step li{
+  width: 33%;
+  display: inline-block;
+}
+.step p{
+    font-size: 4mm;
+    margin-left: 25px;
+}
+.steps{
+    padding: 20px;
+    top: 106px;
+  }
+  /* .step{
+    margin-left: 50px;
+  } */
+/* .step li{
+    padding:25px;
+} */
+.step h1{
+    text-align: left;
+    font-size: 20px;
+    margin-right: 200px;
+    color:darkslategray;
+    margin-left: 25px;
+    border : 1px solid rgb(230, 225, 225);
+    border-radius : 50%;
+    width : 1.5em;
+    height : 1.5em;
+    display : flex;
+    align-items: center;
+    justify-content: center;
+}
+.step h1:hover{
+    background-color: rgb(226,237,230);
+}
+.TopSellers{
+    text-align: center;
+    width: 100%;
+    margin-left: 100px;
+}
+.TopSellers h2{
+    text-align: center;
+}
+.Topseller{
+    white-space: nowrap;
+    max-width: 1200px;
+   margin-top: 50px;
+    text-align: center;
+    
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width : 100%;
+    /* margin : 1em; */
+  }
+  .Topseller h2{
+    text-align: center;
+    font-size: 30px;
+  }
+  .Topseller li{
+    width: 33%;
+    display: inline-block;
+  }
+.Topseller p{
+    font-size: 15px;
+    text-align: center;
+}
+.Topseller button{
+    background-color: white;
+    border-radius: 0;
+    color: black;
+    border: white;
+    margin-bottom: 20px;
+}
+.Topseller .pink{
+    border-radius: 1mm;
+    background: 30px;
+}
