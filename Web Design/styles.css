@@ -2,7 +2,12 @@
     margin: 0;
     padding: 0;
 }
-
+.fullPage{
+    width : 100%;
+    height : 100%;
+    display : flex;
+    flex-direction: column;
+}
 p{
     font-size: 20px;
     color: grey;
@@ -93,6 +98,9 @@ img{
     margin-left: 200px;
     padding-top: 25px;
 }
+
+/* ----------------------------- */
+
 .subscription{
     /* background-color : rgb(252,239,220); */
     width : 100%;
@@ -129,6 +137,8 @@ button{
     height: 50px;
     margin-top: 30px;
 }
+
+/* ---------------------- */
 .steps{
     text-align: center;
     width: 100%;
@@ -159,12 +169,6 @@ button{
     padding: 20px;
     top: 106px;
   }
-  /* .step{
-    margin-left: 50px;
-  } */
-/* .step li{
-    padding:25px;
-} */
 .step h1{
     text-align: left;
     font-size: 20px;
@@ -182,6 +186,9 @@ button{
 .step h1:hover{
     background-color: rgb(226,237,230);
 }
+
+/* ------------------ */
+
 .TopSellers{
     text-align: center;
     width: 100%;
@@ -189,6 +196,8 @@ button{
 }
 .TopSellers h2{
     text-align: center;
+    font-size : 8mm;
+    margin-top : 0.5em;
 }
 .Topseller{
     white-space: nowrap;
@@ -200,29 +209,95 @@ button{
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    width : 100%;
-    /* margin : 1em; */
   }
-  .Topseller h2{
-    text-align: center;
-    font-size: 30px;
-  }
-  .Topseller li{
-    width: 33%;
+.Topseller li{
+    width: 28%;
     display: inline-block;
+    /* padding: 10px; */
   }
 .Topseller p{
-    font-size: 15px;
     text-align: center;
+    font-size : 0.6em;
+    color : grey;
+    font-weight: lighter;
 }
 .Topseller button{
     background-color: white;
-    border-radius: 0;
+    border-radius: 1mm;
     color: black;
     border: white;
     margin-bottom: 20px;
+    width: 65%;
+    height: 40px;
 }
 .Topseller .pink{
+    margin-right: 15px;
     border-radius: 1mm;
-    background: 30px;
+}
+.Topseller .blue{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 5px;
+    border-radius: 1mm;
+}
+.Topseller .orange{
+    margin-left: 15px;
+    border-radius: 1mm;
+}
+
+/* ----------------------- */
+
+.middle{
+    text-align: center;
+    width: 100%;
+    margin-left: 100px;
+}
+.middle h2{
+    text-align: center;
+    font-size : 8mm;
+    margin-top : 0.5em;
+}
+.text{
+    margin-right: 150px;
+}
+.advantages ul{
+    /* white-space: nowrap; */
+    max-width: 1200px;
+   margin-top: 50px;
+    margin-left: 80px;
+    display : flex;
+    align-items: left;
+    justify-content: left;
+    flex-direction: row;
+  }
+.advantages li{
+    width: 19%;
+    display: inline-block;
+    padding-top: 25px;
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 2mm;
+  }
+.middle p{
+    text-align: center;
+    font-size : 4mm;
+    color : grey;
+    font-weight: lighter;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.middle h3{
+    font-family: calibri;
+    color:rgb(21, 43, 43);
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.advantages img{
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 2mm;
+    width: 75px;
+  }
+.advantages li:hover{
+    background-color : rgb(2, 11, 19);
+    color: white;
 }
