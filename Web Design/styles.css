@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
 }
-.fullPage{
+/* .fullPage{
     width : 100%;
     height : 100%;
     display : flex;
     flex-direction: column;
-}
+} */
 p{
     font-size: 20px;
     color: grey;
@@ -17,23 +17,21 @@ p{
 h1{
     font-family:Calibri;
     font-size:55px;
-    color:rgb(21, 43, 43);
+    color:rgb(19, 24, 32);
 }
 h2{
     font-family: calibri;
-    color:rgb(21, 43, 43);
+    color:rgb(19, 24, 32);
     text-align: left;
     margin-left: 20px;
     font-size: 20px;
 }
 .head{
-    width: 100%;
+    width: 90%;
     height: 50px;
     margin: auto;
-    justify-content: space-evenly;
-}
-header{
-    display : flex;
+    justify-content:baseline;
+        display : flex;
     align-items: center;
     justify-content: space-around;
 }
@@ -44,13 +42,14 @@ header{
     text-decoration: none;
     margin-right : 2em;
     margin-left : 2em;
-    color : rgb(21, 43, 43);
+    color : rgb(19, 24, 32);
     font-family: calibri;
 }
 .icon{
     border-right : 2px solid lightgrey;
     padding-right : 2em;
     margin-left : 5em;
+    max-width: 100%;
 }
 .nav img:hover{
     background-color:lightgray;
@@ -65,10 +64,7 @@ header{
     margin : 0.5em;
     margin-left : 2em;
 }
-img{
-    max-width: 100%;
-    max-height: 100%;
-   }
+
 .food{
     margin-right: 0px;
     width: 300px;
@@ -127,15 +123,16 @@ img{
     
 }
 button{
-    background-color: rgb(6, 12, 12);
+    background-color: rgb(19, 24, 32);
     border-radius: 50mm;
     color: white;
     font-family: calibri;
-    font-weight: bold;
+    font-weight:normal;
     font-size: 5mm;
     width: 150px;
     height: 50px;
     margin-top: 30px;
+    border: none;
 }
 
 /* ---------------------- */
@@ -252,10 +249,22 @@ button{
     width: 100%;
     margin-left: 100px;
 }
-.middle h2{
+
+.text p{
     text-align: center;
-    font-size : 8mm;
-    margin-top : 0.5em;
+    font-size : 4mm;
+    color : grey;
+    font-weight: lighter;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.middle p{
+    text-align: center;
+    font-size : 4mm;
+    color : grey;
+    font-weight: lighter;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 .text{
     margin-right: 150px;
@@ -277,17 +286,9 @@ button{
     border: 1px solid rgb(190, 190, 190);
     border-radius: 2mm;
   }
-.middle p{
-    text-align: center;
-    font-size : 4mm;
-    color : grey;
-    font-weight: lighter;
-    margin-top: 20px;
-    margin-bottom: 40px;
-}
 .middle h3{
     font-family: calibri;
-    color:rgb(21, 43, 43);
+    color:rgb(19, 24, 32);
     text-align: center;
     margin-top: 20px;
     font-size: 20px;
@@ -300,4 +301,99 @@ button{
 .advantages li:hover{
     background-color : rgb(2, 11, 19);
     color: white;
+}
+
+/* --------------- */
+
+.questions{
+    text-align: center;
+    width: 100%;
+    margin-left: 100px;
+}
+.ask{
+    display: flex;
+    flex-direction: column;
+
+    width: 80%;
+
+}
+.quest{
+    background-color:lavenderblush;
+    border-bottom: 2px solid rgb(255, 239, 239);
+    padding-bottom: 25px;
+    padding-left: 60px;
+    text-align: left;
+}
+.quest h3{
+    font-family: calibri;
+    color:rgb(19, 24, 32);
+    font-size : 20px;
+    margin-top : 1.5em;
+}
+.quest p{
+    font-size: 15px;
+    padding: 5px;
+}
+.comments{
+    width : 100%;
+    padding-left: 100px;
+    display : flex;
+    /* justify-content: space-evenly; */
+    margin-bottom: 300px;
+}
+footer{
+    background-color: rgb(19, 24, 32);
+    padding: 10px 10px 70px 80px;
+}
+.petqo{
+    border-bottom: 2px solid darkslategray;
+    padding: 10px 0;
+}
+.petqo p{
+    float: right;
+    font-size: smaller;
+    margin-right: 100px;
+}
+.midbot{
+    border-bottom: 2px solid darkslategray;
+}
+.leftsec{
+    width:fit-content
+}
+.leftsec h3{
+    font-family: calibri;
+    color:white;
+    font-size : 20px;
+    margin-top : 1.5em;
+    font-weight: lighter;
+}
+.leftsec p{
+    font-size: smaller;
+    padding: 10px 0;
+}
+form input{
+    margin-top: 20px;
+    border-radius: 5mm;
+    padding: 10px 20px;
+    height: 10px;
+    width: 200px;
+    font-size: 10px;
+    background-color: rgb(33, 33, 44);
+    border: none;
+}
+form button{
+    background-color: white;
+    color: rgb(19, 24, 32);
+    height: 30px;
+    width: 100px;
+    margin: 10px 0;
+    font-size: small;
+    font-weight: bold;
+    border: none;
+}
+.rightsec{
+    float: right;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
 }
