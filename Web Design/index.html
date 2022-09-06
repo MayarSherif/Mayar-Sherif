@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles.css">
-    <title>Document</title>
+    <title>Petqo</title>
 </head>
 <body>
   <header class="head">
@@ -104,22 +104,22 @@
     </div>
     <div class="advantages">
       <ul>
-        <li style="margin-right: 17px;">
+        <li>
           <img src="img/bowl.png">
           <h3>Nutritionally<br> Complete</h3>
           <p>An adult cat could happily <br>live off petqo cat food</p>
         </li>
-        <li style="margin-left: 17px; margin-right: 17px;">
+        <li>
           <img src="img/paw paper.png">
           <h3>Made By Experts</h3>
           <p>It's been developed by leading<br> pet nutritionists.</p>
         </li>
-        <li style="margin-left: 17px; margin-right: 17px;">
+        <li>
           <img src="img/paw heart.png">
           <h3>Loved By Cats</h3>
           <p>It helps keep teeth and gums <br>healthu, it's delicious to eat and <br>easy to digest.</p>
         </li>
-        <li style="margin-left: 17px;">
+        <li>
           <img src="img/earth.png">
           <h3>Easy On The<br> Planet</h3>
           <p>Farming bugs uses 70% less <br>land than beef.</p>
@@ -134,22 +134,27 @@
     </div>
     <div class="ask">
       <div class="quest">
-        <h3>Where is your food made?</h3>
-        <p>Petqo products are proudly manufactured in company-owned 
+        <h3 id="visible">Where is your food made?</h3>
+        <p id="invisible"><br><br>Petqo products are proudly manufactured in company-owned 
           facilities in Clinton, lowa under <br>strict quality control practices.
         </p>
+        <button class="show" onclick="toggleText()">+</button>
       </div>
       <div class="quest">
         <h3>Does Petqo use grains? If so, why?</h3>
+        <button class="show">+</button>
       </div>
       <div class="quest">
         <h3>How long does it take to get my order?</h3>
+        <button class="show">+</button>
       </div>
       <div class="quest">
         <h3>How much is shipping?</h3>
+        <button class="show">+</button>
       </div>
       <div class="quest">
         <h3>What happens if my package gets lost?</h3>
+        <button class="show">+</button>
       </div>
     </div>
   </section>
@@ -179,9 +184,9 @@
         </form>
       </div>
       <div class="rightsec">
-        <div class="ul1">
+        <div class="categories">
           <h3>Top Categories</h3>
-          <ul class="categories">
+          <ul class="ul1">
             <li>Dog</li>
             <li>Cat</li>
             <li>Horse</li>
@@ -189,41 +194,52 @@
             <li>Homeopathi</li>
           </ul>
         </div>
-        <div class="ul2">
+        <div class="foodtypes">
           <h3>Food</h3>
-          <ul class="food">
+          <ul class="ul2">
             <li>Grade Fresh</li>
             <li>Dried Raw</li>
             <li>The Pantry</li>
             <li>Smalls Reviews</li>
             <li>Cat Nutrition</li>
+          </ul>
         </div>
-        <div class="ul3">
+        <div class="learn">
           <h3>Learn</h3>
-          <ul class="learn">
+          <ul class="ul3">
             <li>FAQs</li>
             <li>Blog</li>
             <li>About Us</li>
             <li>Contact</li>
+          </ul>
         </div>
-        <div class="ul4">
+        <div class="pages">
           <h3>Utility pages</h3>
-          <ul class="pages">
-            <li>
-              <h3>Email</h3>
-              <p>aemai.com</p>
+          <ul class="ul4">
+            <li style="background-color:rgba(240, 255, 255, 0.247); margin-bottom: 10px; padding-left: 20px;">
+              <img src="img/mail.png" width="25" height="25">
+              <h3>&nbsp;Email</h3>
+              <p><br>aemai.com</p>
             </li>
-            <li>
-              <h3>Call</h3>
-              <p>(481) 000 - 0000</p>
+            <li style="background-color:rgba(240, 255, 255, 0.247); margin-bottom: 10px; padding-left: 20px;">
+              <img src="img/call.png" width="25" height="25">
+              <h3>&nbsp;Call</h3>
+              <p><br>&emsp;(481) 000 - 0000</p>
             </li>
-            <li>
-              <h3>Chat</h3>
-              <p>Open Live Chat</p>
+            <li style="background-color:rgba(240, 255, 255, 0.247); padding-left: 20px;">
+              <img src="img/chat.png" width="25" height="25">
+              <h3>&nbsp;Chat</h3>
+              <p><br>&ensp;Open Live Chat</p>
             </li>
+          </ul>
         </div>
       </div>
     </div>
+    <div class="copyrights">
+      <p>@2021 uihit.com | Privacy&ensp;Terms&ensp; Contact Us</p>
+      <img src="img/logos.png" width="150px">
+    </div>
   </footer>
+  <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
