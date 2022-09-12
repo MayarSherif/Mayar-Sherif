@@ -1,0 +1,337 @@
+@import "reset";
+@import "mixins";
+@import "variables";
+
+
+.main-nav{
+    @include ulli;
+    a{
+        color: $deepBlue;
+        text-decoration: none;
+        padding: 16px;
+        display: block;
+        text-align: center;
+      }
+    @include clearFix;
+}
+.midnav{
+    border-left: 2px solid lightgrey;
+    @include ulli;
+    li{
+        width: 25%;
+    }
+}
+.rightnav{
+    border-left: 2px solid lightgrey;
+    ul{
+        width: 60%;
+    }
+    li{
+        text-align:right;
+        padding-top: 15px;
+        text-decoration: none;
+
+        float: right;
+        width: 20%; 
+    }
+    img{
+        &:hover{
+            background: lighten($deepBlue, 6);
+            border-radius: 1mm;
+          }
+    }
+}
+.banner{
+    background-color: antiquewhite;
+    position: relative;
+    color: $text;
+    width: 100%;
+    .brand{
+        position: absolute;
+        font-size: 40px;
+        font-family: calibri;
+        top: 80px;
+        left: 170px;
+        width: 30%;
+    }
+    p{
+        position: absolute;
+        font-size: 15px;
+        color: grey;
+        top: 220px;
+    }
+    img{
+        float: right;
+        padding-top: 50px;
+        padding-right: 150px
+    }
+    button{
+        background-color: rgb(19, 24, 32);
+        border-radius: 50mm;
+        border: none;
+        color: white;
+        font-family: calibri;
+        font-weight:bold;
+        width: 100px;
+        height: 30px
+    }
+    @include clearFix;
+}
+.brandsbar{
+    text-align: center;
+    width: 100%;
+    h2{
+        color: $text;
+        padding-top: 25px;
+        font-weight: bold;
+    }
+}
+.subscription{
+    position: relative;
+    color: $text;
+    width: 100%;
+    .description{
+        position: absolute;
+        font-size: 40px;
+        font-family: calibri;
+        top: 150px;
+        left: 170px;
+        width: 500px;
+    }
+    p{
+        position: absolute;
+        font-size: 15px;
+        color: grey;
+        top: 150px;
+    }
+    img{
+        float: right;
+        padding-top: 40px;
+        padding-right: 150px
+    }
+    button{
+        background-color: rgb(19, 24, 32);
+        border-radius: 50mm;
+        border: none;
+        color: white;
+        font-family: calibri;
+        font-weight:bold;
+        width: 100px;
+        height: 30px
+    }
+    @include clearFix;
+}
+
+.steps{
+    color: $text;
+    width: 80%;
+    margin-left: 12%;
+    @include ulli;
+    li{
+        text-align: left;
+    }
+    p{
+        font-size: 15px;
+        color: grey;
+    }
+    h1{
+        border: 1px solid rgb(230, 225, 225);
+        border-radius : 50%;
+        width: 12%;
+        text-align: center;
+        &:hover{
+            background-color: rgb(226,237,230);
+        }
+    }
+    h2{
+        font-weight: bold;
+    }
+    @include clearFix;
+}
+
+.topseller{
+    text-align: center;
+    align-items: center;
+    color: $text;
+    font-family: calibri;
+    width: 100%;
+    @include ulli;
+    h1{
+        padding-top: 25px;
+        font-size: 40px;
+        text-align: center;
+    }
+    .topsellers{
+        padding-right: 140px;
+    }
+    li{
+        float: right;
+        align-items: center;
+        width: 300px;
+        height: 400px;
+        margin: 0 30px;
+        border-radius: 2mm;
+    }
+    p{
+        font-size: 15px;
+        color: grey;
+    }
+    button{
+        background-color: white;
+        width: 200px;
+        height: 35px;
+        border-radius: 1mm;
+        font-weight: bold;
+        border: none;
+    }
+    @include clearFix;
+}
+ .middle{
+    text-align: center;
+    width: 100%;
+    font-family: calibri;
+    h1{
+        padding-top: 25px;
+        font-size: 40px;
+        color: $text;
+        text-align: center;
+    }
+    img{
+        width: 50px;
+        border: 1px solid rgb(190, 190, 190);
+        border-radius: 2mm;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+    }
+
+    p{
+        font-size: 15px;
+        color: grey;
+    }
+    h2{
+        padding-top: 25px;
+        font-weight:bolder;
+    }
+    li{
+        border: 1px solid rgb(190, 190, 190);
+        border-radius: 2mm;
+        display: inline-block;
+        width: 200px;
+        height: 170px;
+        margin: 0 30px;
+        padding: 25px 10px;
+        &:hover{
+            background-color : rgb(2, 11, 19);
+            color: white;
+        }
+    }
+}
+
+.questions{
+    text-align: center;
+    width: 100%;
+    h1{
+        padding-top: 25px;
+        font-size: 40px;
+        color: $text;  
+    }
+    p{
+        font-size: 15px;
+        color: grey;
+    }
+    button{
+        background-color: lavenderblush;
+        font-family: calibri;
+        color:rgb(19, 24, 32);
+        font-size : 18px;
+        font-weight:bold;
+        padding: 15px;
+        width: 80%;
+        border: none;
+        text-align: left;
+        outline: none;
+        &:hover{
+            background-color: darken(lavenderblush, 6);
+        }
+        // &:active{
+        //     background-color: darken(lavenderblush, 6);
+        // }
+    }
+    .ans{
+        width: 79.5%;
+        height: 50px;
+        display: none;
+        background-color: darken(lavenderblush, 6);
+        margin-left: 135px;
+        text-align: left;
+        padding-left: 7px;
+    }
+}
+.comments{
+        text-align: left;
+        width: 20%;
+        padding-left: 140px;
+        h1{
+            padding-top: 25px;
+            font-size: 40px;
+            color: $text;  
+        }
+        p{
+            font-size: 15px;
+            color: grey;
+        }
+        button{
+            background-color: rgb(19, 24, 32);
+            border-radius: 50mm;
+            border: none;
+            color: white;
+            font-family: calibri;
+            font-weight:bold;
+            width: 100px;
+            height: 30px
+        }
+}
+.footer{
+    background-color: $text;
+    width: 100%;
+    align-items: center;
+}
+.petqo{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding-left: 115px;
+    border-bottom: 1px solid darken( grey, 30);
+    p{
+        color: grey;
+    }
+}
+.midbot{
+    @include ulli;
+    padding-left: 115px;
+    color: white;
+    border-bottom: 1px solid darken( grey, 30);
+    li{
+        width: 20%;
+        text-align: left;
+    }
+    @include clearFix
+}
+.contact{
+    display: flex;
+}
+.copyrights{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding-left: 115px;
+    border-bottom: 1px solid darken( grey, 30);
+    p{
+        color: grey;
+    }
+}
