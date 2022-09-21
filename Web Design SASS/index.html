@@ -1,590 +1,304 @@
-@import "reset";
-@import "mixins";
-@import "variables";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Petqo</title>
+</head>
+<body>
+  <header class="main-nav">
+    <div class="mainul">
+      <div class="icon">
+        <img src="img/petqo black.png" width="125em">
+      </div>
+      <div class="dropdown">
+        <button class="collapsible">Menu</button>
+        <div class="dropdown-content">
+          <a href="/home.html">Home</a>
+          <a href="/about.html">About us</a>
+          <a href="/blog.html">Blog</a>
+          <a href="/shop.html">Shop</a>
+          <a href="/blog.html">My profile</a>
+          <a href="/shop.html">My cart</a>
+        </div>
+      </div>
+      <div class="midnav">
+        <ul>
+            <li> <a href="/home.html">Home</a></li>
+            <li> <a href="/about.html">About us</a></li>
+            <li> <a href="/blog.html">Blog</a></li>
+            <li><a href="/shop.html">Shop</a></li>
+        </ul>
+      </div>
+      <div class="rightnav">
+        <ul>
+           <li> <img src="img/little person.png" width=20></li>
+           <li><img src="img/shopping cart.png" width=25></li>
+           <li> <img src="img/search icon.png" width=20></li>
+        </ul>
+      </div>
+    </div>
+  </header>
 
-body{
-    font-size: 20px;
-    align-items: center;
-    justify-content: center;
-}
-.mainul{
-    font-size: smaller;
-    display: grid;
-    grid-template-columns: 10em 0px 25em 20em;
-    gap: 3em;
-    justify-content: center;
+<!-- ------------------BANNER----------------------- -->
 
-}
-.main-nav{
-    // @include ulli;
-    width: 100%;
-    height: 50px;
-    .dropdown{
-        position: relative;
-        button{
-            display: none;
-            border: none;
-            padding: 20px;
-            height: 57px;
-            background-color: white;
-        }
-        .dropdown-content{
-            display: none;
-            position: absolute;
-            // left: 50px;
-            z-index: 1;
-            background-color: #f1f1f1;
-            min-width: 7em;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        }
-    }
-    a{
-        color: $deepBlue;
-        text-decoration: none;
-        padding: 16px;
-        display: block;
-        text-align: center;
-      }
-}
-.midnav{
-    border-left: 2px solid lightgrey;
-    @include ulli;
-    li{
-        width: 25%;
-    }
-    height: 50px;
-}
-.rightnav{
-    border-left: 2px solid lightgrey;
-    height: 3em;
-    img{
-        width: 1.56em;
-    }
-    ul{
-        width: 60%;
-    }
-    li{
-        text-align:right;
-        padding-top: 15px;
-        text-decoration: none;
+  <section class="banner">
+    <div class="brand">
+      <h1><br>Pet food brand that cares for your pets</h1>
+      <p>Discover makes it easy to serve our feline friends hearty, wholesome meals,
+         keeping them healthy and happy for all nine of their lives.</p>
+         <button class="btnshop">Shop Now ➚</button>
+    </div>
+    <div class="food" >
+      <img src="img/food head.png">
+    </div>
+  </section>
 
-        float: right;
-        width: 20%; 
-    }
-    img{
-        &:hover{
-            background: lighten($deepBlue, 6);
-            border-radius: 1mm;
-          }
-    }
-}
-.banner{
-    background-color: antiquewhite;
-    // position: relative;
-    color: $text;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 25em 25em;
-    justify-content: center;
-    gap: 2.5em;
+<!-- -------------------BRANDS----------------------- -->
 
-    .brand{
-        // position: absolute;
-        font-size: 2em;
-        font-family: calibri;
-        
-        // top: 80px;
-        // left: 170px;
-        // width: 30%;
-        width: 10em;
-    }
-    p{
-        // position: absolute;
-        font-size: 0.35em;
-        color: grey;
-        // top: 220px;
-    }
-    img{
-        padding-left: 150px;
-        padding-top: 20px;
-        width: 15em;
-    }
-    button{
-        background-color: rgb(19, 24, 32);
-        border-radius: 50mm;
-        border: none;
-        color: white;
-        font-family: calibri;
-        font-weight:bold;
-        width: 7em;
-        height: 2.5em
-    }
-    @include clearFix;
-}
-.brandsbar{
-    text-align: center;
-    justify-content: center;
-    width: 100%;
-    img{
-        width: 55em;
-    }
-    h2{
-        color: $text;
-        padding-top: 1.25em;
-        font-weight: bold;
-    }
-}
-.subscription{
-    // position: relative;
-    color: $text;
-    width: 100%;
+  <section class="brandsbar">
+    <h2>Brands you know and trust</h2>
+    <div class="brands">
+      <img src="img/brands.png">
+    </div>
+  </section>
 
-    display: grid;
-    grid-template-columns: 25em 25em;
-    justify-content: center;
-    gap: 4em;
-    .description{
-        // position: absolute;
-        justify-content: center;
-        font-size: 2em;
-        font-family: calibri;
-        padding-top: 2.5em;
-        width: 10em;
-        // top: 150px;
-        // left: 170px;
-        // width: 500px;
-    }
-    p{
-        font-size: 0.35em;
-        color: grey;
-    }
-    img{
-        // float: right;
-        // padding-top: 40px;
-        // padding-right: 150px
-        width: 25em;
-    }
-    button{
-        background-color: rgb(19, 24, 32);
-        border-radius: 50mm;
-        border: none;
-        color: white;
-        font-family: calibri;
-        font-weight:bold;
-        width: 100px;
-        height: 30px
-    }
-    @include clearFix;
-}
+<!-- -----------------SUBSCRIPTION-------------------- -->
 
-.steps{
-    color: $text;
-    width: 100%;
-    // justify-content: center;
-    // @include ulli;
-    // li{
-    //     text-align: left;
-    // }
-    // display: grid;
-    // grid-template-columns: 1fr 1fr 1fr;
-    p{
-        font-size: 0.75em;
-        color: grey;
-    }
-    h1{
-        border: 1px solid rgb(230, 225, 225);
-        border-radius : 50%;
-        width: 12%;
-        text-align: center;
-        &:hover{
-            background-color: rgb(226,237,230);
-        }
-    }
-    h2{
-        font-weight: bold;
-    }
-    // @include clearFix;
-}
-.step{
-    display: grid;
-    grid-template-columns: 17em 17em 17em;
-    justify-content: center;
-}
+  <section class="subscription">
+    <div class="description">
+      <h1>How your subscription works</h1>
+      <p>Pet food subscription makes sure your pet never
+        runs out of food. You can choose to receive
+        regular shipments.</p>
+      <button>Get Started ➚</button>
+    </div>
+    <div class="cat">
+      <img src="img/cat-img.png" class="cat">
+    </div>
+  </section>
 
-.topseller{
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    color: $text;
-    font-family: calibri;
-    width: 100%;
-    @include ulli;
-    .first{
-        background-color: rgb(200,212,205);
-    }
-    .second{
-        background-color : rgb(244,231,210)
-    }
-    .third{
-        background-color : rgb(197,228,251)
-    }
-    h1{
-        padding-top: 1.25em;
-        font-size: 2em;
-        text-align: center;
-    }
-    .topsellers{
-        display: grid;
-        grid-template-columns: 15em 15em 15em;
-        justify-content: center;
-        gap: 2.5em;
-    }
-    li{
-        float: right;
-        align-items: center;
-        width: 300px;
-        height: 400px;
-        margin: 0 30px;
-        border-radius: 2mm;
-    }
-    p{
-        font-size: 0.55em;
-        color: grey;
-    }
-    button{
-        background-color: white;
-        width: 10em;
-        height: 35px;
-        border-radius: 1mm;
-        font-weight: bold;
-        border: none;
-        margin-bottom: 0.5em;
-    }
-    img{
-        width: 7.5em;
-    }
-    .pink{
-        width: 9em;
-    }
-    @include clearFix;
-}
- .middle{
-    text-align: center;
-    width: 100%;
-    font-family: calibri;
-    .advantages{
-        display: grid;
-        grid-template-columns: 12em 12em 12em 12em;
-        justify-content: center;
-        gap: 2.5em;
-    }
-    .adv{
-        border: 1px solid rgb(190, 190, 190);
-        border-radius: 2mm;
-        padding-top: 0.5em;
-    }
-    h1{
-        padding-top: 25px;
-        font-size: 2em;
-        color: $text;
-        text-align: center;
-    }
-    img{
-        width: 3em;
-        border: 1px solid rgb(190, 190, 190);
-        border-radius: 2mm;
-    }
+<!-- -----------------STEPS--------------------- -->
 
-    p{
-        font-size: 0.75em;
-        color: grey;
-    }
-    h2{
-        padding-top: 25px;
-        font-weight:bolder;
-    }
-}
+  <section class="steps">
+    <div class="step">
+      <div> 
+        <h1>1</h1>
+        <h2>Tell us about your pup</h2>
+        <p>Take our quick quiz and we'll create a<br> customized,
+          subscription meal plan designed<br> just for your pup.
+        </p>
+      </div>
+      <div>
+        <h1>2</h1>
+        <h2>Get your starter box</h2>
+        <p>We'll send you two weeks of freshly cooked<br>food that'll put your pup on the path towards<br>
+          real, meaningful health benefits.
+        </p>
+      </div>
+      <div>
+        <h1>3</h1>
+        <h2>Receive regular, reliable deliveries</h2>
+        <p>After your starter box, you'll receive regularly<br>scheduled deliveries of fresh food right to
+          <br>your door--
+        </p>
+      </div>
+    </div>
+  </section>
 
-.questions{
-    text-align: center;
-    width: 100%;
-    h1{
-        padding-top: 25px;
-        font-size: 2em;
-        color: $text;  
-    }
-    p{
-        font-size: 0.75em;
-        color: grey;
-    }
-    button{
-        background-color: lavenderblush;
-        font-family: calibri;
-        color:rgb(19, 24, 32);
-        font-size : 0.90em;
-        font-weight:bold;
-        padding: 0.75em;
-        width: 80%;
-        border: none;
-        text-align: left;
-        outline: none;
-        &:hover{
-            background-color: darken(lavenderblush, 6);
-        }
-        // &:active{
-        //     background-color: darken(lavenderblush, 6);
-        // }
-    }
-    .ans{
-        width: 53.6em;
-        height: 2.5em;
-        display: none;
-        background-color: darken(lavenderblush, 6);
-        text-align: left;
-        margin-left: 6.77em;
-        padding-left: 0.4em;
-    }
-}
-.comments{
-        text-align: left;
-        width: 20%;
-        padding-left: 7em;
-        h1{
-            padding-top: 25px;
-            font-size: 2em;
-            color: $text;  
-        }
-        p{
-            font-size: 0.75em;
-            color: grey;
-        }
-        button{
-            background-color: rgb(19, 24, 32);
-            border-radius: 50mm;
-            border: none;
-            color: white;
-            font-family: calibri;
-            font-weight:bold;
-            width: 7em;
-            height: 1.5em;
-        }
-}
-.footer{
-    background-color: $text;
-    width: 100%;
-    align-items: center;
-}
-.petqo{
-    padding-top: 0.5em;
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    padding-left: 5.75em;
-    border-bottom: 1px solid darken( grey, 30);
-    p{
-        color: grey;
-    }
-}
-.midbot{
-    @include ulli;
-    padding-left: 5.75em;
-    color: white;
-    border-bottom: 1px solid darken( grey, 30);
-    li{
-        width: 18.5%;
-        text-align: left;
-    }
-    input{
-        border-radius: 5mm;
-        background-color: rgb(33, 33, 44);
-        border: none;
-        width: 10em;
-        height: 1em;
-        padding: 0.25em;
-    }
-    button{
-        border: none;
-        border-radius: 5mm;
-        color: $text;
-        padding: 0.25em;
-        width: 5em;
-    }
-    @include clearFix
-}
-.contact{
-    display: flex;
-    background-color:rgba(240, 255, 255, 0.247);
-    border-radius: 2mm;
-    width: 7.5em;
-    margin: 0.25em;
-    padding: 0.25em;
-    a{
-        font-size: 0.55em;
-    }
-}
-.copyrights{
-    padding-top: 0.5em;
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
-    padding-left: 5.75em;
-    border-bottom: 1px solid darken( grey, 30);
-    p{
-        color: grey;
-    }
-}
-@media screen and (max-width: 1200px){
-    body{
-        font-size: 15px;
-        width: 100%;
-    }
-}
-@media screen and (max-width: 900px){
-    body{
-        font-size: 12px;
-        width: 100%;
-    }
-    .main-nav{
-        width: 100%;}
-    .banner{
-        // text-align: center;
-        height: 300px;
-        width: 100%;
+<!-- -----------------TOPSELLERS--------------------- -->
 
-    }
-            
-}
-@media screen and (max-width: 500px) {
-    body{
-        font-size: 8px;
-    }
-    .main-nav{
-        width: 100%;
-        @include ulli;
-        // padding-left: 100px;
-        justify-content: center;
-        align-items: center;
-        .mainul{
-            display: flex;
-            justify-content: space-between;
-        }
-        .rightnav{
-          display: none;
-        }
-        .midnav{
-            display: none;
-            align-items: center;
-        }
-        .dropdown{
+  <section class="topseller">
+    <h1>Our Top Sellers</h1>
+    <div class="topsellers">
+      <div class="first"> 
+        <img src="img/pink food.png">
+        <p>Grain Friendly</p>
+        <h2>Organic Chicken, <br>Brown Rice</h2>
+        <button class="whitebtn">Shop Now</button>
+      </div>
+      <div class="second"> 
+        <img class="pink" src="img/blue food.png">
+        <p>Victor Purpose</p>
+        <h2>Grain-Free <br>Organic Bundle</h2>
+        <button class="whitebtn">Shop Now</button>
+      </div>
+      <div class="third"> 
+        <img src="img/orange food.png">
+        <p>American Journey</p>
+        <h2>Grain-Friendly <br>Organic Bundle</h2>
+        <br>
+        <button class="whitebtn">Shop Now</button>
+      </div>
+    </div>
+  </section> 
 
-          button{
-            display: block;
-            width: 5em;
-            height: 2em;
-          }
-        }
-        // li{
-        //   width: 50%;
-        //   float: inline-end;
-        // }
-    
-      }
-      
-      // -------------banner-----------------
-      .banner{
-        text-align: center;
-        height: 300px;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        img{
-          display: none;
-        }
-        .brand{
-          text-align: center;
-        //   width: 350px;
-        }
-      }
-    
-      // -------------brandsbar------------------
-    
-      .brandsbar{
-        text-align: center;
-        width: 100%;
-        h2{
-          width: 80%;
-          padding-right: 15px;
-        }
-        img{
-          width: 100%;
-        }
-      }
-    
-      .subscription{
-        height: 500px;
-        width: 100%;
-        text-align: center;
-        padding: 0;
-        img{
-          display: none;
-        }
-        .description{
-          width: 50%;
-        }
-      }
-      .steps{
-        width: 100%;
-        text-align: center;
-        li{
-          width: 245px;
-        }
-      }
-      .topseller{
-        width: 100%;
-        li{
-          width: fit-content  ;
-        }
-        .topsellers{
-            display: inline;
-        }
-        .first{
-            background-color: white;
-        }
-        .second{
-            background-color: white;
-        }
-        .third{
-            background-color: white;
-        }
-        button{
-            color: antiquewhite;
-        }
-      }
-      .middle{
-        width: 100%;
-      }
-      .subscription{
-        display: flex;
-        height: max-content;
-        padding-bottom: 20px;
-      }
-      .advantages{
-        display: contents;
-      }
-      .comments{
-        button{
-            font-size: 5px;
-            width: 50px;
-        }
-    }
-    .questions{
-        
-        .ans{
-            margin-left: 45px;
-            width: 79%;
-        }
-          
-    }
+<!-- -----------------ADVANTAGES--------------------- -->
 
-}
+  <section class="middle">
+    <div>
+      <h1>All you require is Petqo<br> pet food.</h1>
+      <p>It's everything you need to feed your pet
+         while also <br>helping the environment.</p>
+    </div>
+    <br><br>
+    <div class="advantages">
+      <div class="adv">
+        <img src="img/bowl.png">
+        <h2>Nutritionally<br> Complete</h2>
+        <p>An adult cat could happily <br>live off petqo cat food</p>
+      </div>
+      <div class="adv">
+        <img src="img/paw paper.png">
+        <h2>Made By Experts</h2>
+        <p>It's been developed by leading<br> pet nutritionists.</p>
+      </div>
+      <div class="adv">
+        <img src="img/paw heart.png">
+        <h2>Loved By Cats</h2>
+        <p>It helps keep teeth and gums <br>healthu, it's delicious to eat and <br>easy to digest.</p>
+      </div>
+      <div class="adv">
+        <img src="img/earth.png">
+        <h2>Easy On The<br> Planet</h2>
+        <p>Farming bugs uses 70% less <br>land than beef.</p>
+      </div>
+    </div>
+  </section>
+  <br><br>
+
+<!-- -----------------QUESTIONS--------------------- -->
+
+  <section class="questions">
+
+    <div class="text">
+      <h1>Any Questions</h1>
+      <p>Web have (almost) Common the answers</p>
+    </div>
+
+    <div class="ask">
+      <button class="collapsible">Where is your food made?</button>
+      <div class="ans">
+        <p id="invisible">Petqo products are proudly manufactured in company-owned 
+          facilities in Clinton, lowa under <br>strict quality control practices.
+        </p>
+      </div>
+      <button class="collapsible">Does Petqo use grains? If so, why?</button>
+      <div class="ans">
+        <p id="invisible">Petqo products are proudly manufactured in company-owned 
+          facilities in Clinton, lowa under <br>strict quality control practices.
+        </p>
+      </div>
+      <button class="collapsible">How long does it take to get my order?</button>
+      <div class="ans">
+        <p id="invisible">Petqo products are proudly manufactured in company-owned 
+          facilities in Clinton, lowa under <br>strict quality control practices.
+        </p>
+      </div>
+      <button class="collapsible">How much is shipping?</button>
+      <div class="ans">
+        <p id="invisible">Petqo products are proudly manufactured in company-owned 
+          facilities in Clinton, lowa under <br>strict quality control practices.
+        </p>
+      </div>
+      <button class="collapsible">What happens if my package gets lost?</button>
+      <div class="ans">
+        <p id="invisible">Petqo products are proudly manufactured in company-owned 
+          facilities in Clinton, lowa under <br>strict quality control practices.
+        </p>
+      </div>
+    </div>
+  </section>
+
+<!-- -----------------COMMENTS--------------------- -->
+
+  <section class="comments">
+    <div class="brand">
+      <h1>Customers testimonials</h1>
+      <p>The most rewarding part of our job is hearing from people whose
+        pets are leaving better, more energetic.
+      </p>
+         <button class="btnshop">See All Story ➚</button>
+    </div>
+    <br>
+  </section>
+
+<!-- -----------------FOOTER--------------------- -->
+
+  <footer class="footer">
+    <div class="petqo">
+      <img src="img/petqo white.png" width="120px">
+      <p>Petqo pet food has a long history in the development of pet food.
+         All <br>the products used for our snacks are top quality.</p>
+    </div>
+    <div class="midbot">
+      <br><br>
+      <ul>
+        <li class="sec1">
+          <h3>Subscribe to my <br>newsletter</h3>
+          <p>Get Kabo promotions and healthy <br> advice for your pet.</p>
+          <form>
+            <input type="email" placeholder="Email Address">
+            <br>
+            <button>Subscribe</button>
+          </form>
+        </li>
+        <li class="sec2">
+          <h3>Top Categories</h3>
+          <p>Dog</p>
+          <p>Cat</p>
+          <p>Horse</p>
+          <p>Bird</p>
+          <p>Homeopathi</p>
+        </li>
+        <li class="sec3">
+          <h3>Food</h3>
+          <p>Grade Fresh</p>
+          <p>Dried Raw</p>
+          <p>The Pantry</p>
+          <p>Smalls Reviews</p>
+          <p>Cat Nutrition</p>
+        </li>
+        <li class="sec4">
+          <h3>Learn</h3>
+          <p>FAQs</p>
+          <p>Blog</p>
+          <p>About Us</p>
+          <p>Contact</p>
+        </li>
+        <li class="sec5">
+          <h3>Utility pages</h3>
+          <div class="contact">
+            <img src="img/mail.png" width="25" height="25">
+            <div>
+              <h3>Email</h3>
+              <a>aemai.com</a>
+            </div>
+          </div>
+          <div class="contact">
+            <img src="img/call.png" width="25" height="25">
+            <div>
+              <h3>Call</h3>
+              <a>(481) 000 - 0000</a>
+            </div>
+          </div>
+          <div class="contact">
+            <img src="img/chat.png" width="25" height="25">
+            <div>
+              <h3>Chat</h3>
+              <a>Open Live Chat</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="copyrights">
+      <p>@2021 uihit.com | Privacy&ensp;Terms&ensp; Contact Us</p>
+      <img src="img/logos.png" width="150px">
+    </div>
+  </footer>
+  <script type="text/javascript" src="script.js"></script>
+</body>
