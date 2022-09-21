@@ -31,15 +31,41 @@ p, h1, h2, h3 {
   font-family: calibri;
 }
 
-.main-nav ul {
-  width: 100%;
+body {
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
 }
-.main-nav li {
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  float: left;
-  width: 33%;
+
+.mainul {
+  font-size: smaller;
+  display: grid;
+  grid-template-columns: 10em 0px 25em 20em;
+  gap: 3em;
+  justify-content: center;
+}
+
+.main-nav {
+  width: 100%;
+  height: 50px;
+}
+.main-nav .dropdown {
+  position: relative;
+}
+.main-nav .dropdown button {
+  display: none;
+  border: none;
+  padding: 20px;
+  height: 57px;
+  background-color: white;
+}
+.main-nav .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #f1f1f1;
+  min-width: 7em;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 .main-nav a {
   color: #809faa;
@@ -48,14 +74,10 @@ p, h1, h2, h3 {
   display: block;
   text-align: center;
 }
-.main-nav:after {
-  content: "";
-  display: block;
-  clear: both;
-}
 
 .midnav {
   border-left: 2px solid lightgrey;
+  height: 50px;
 }
 .midnav ul {
   width: 100%;
@@ -73,6 +95,10 @@ p, h1, h2, h3 {
 
 .rightnav {
   border-left: 2px solid lightgrey;
+  height: 3em;
+}
+.rightnav img {
+  width: 1.56em;
 }
 .rightnav ul {
   width: 60%;
@@ -91,28 +117,26 @@ p, h1, h2, h3 {
 
 .banner {
   background-color: antiquewhite;
-  position: relative;
   color: #131820;
   width: 100%;
+  display: grid;
+  grid-template-columns: 25em 25em;
+  justify-content: center;
+  gap: 2.5em;
 }
 .banner .brand {
-  position: absolute;
-  font-size: 40px;
+  font-size: 2em;
   font-family: calibri;
-  top: 80px;
-  left: 170px;
-  width: 30%;
+  width: 10em;
 }
 .banner p {
-  position: absolute;
-  font-size: 15px;
+  font-size: 0.35em;
   color: grey;
-  top: 220px;
 }
 .banner img {
-  float: right;
-  padding-top: 50px;
-  padding-right: 150px;
+  padding-left: 150px;
+  padding-top: 20px;
+  width: 15em;
 }
 .banner button {
   background-color: rgb(19, 24, 32);
@@ -121,8 +145,8 @@ p, h1, h2, h3 {
   color: white;
   font-family: calibri;
   font-weight: bold;
-  width: 100px;
-  height: 30px;
+  width: 7em;
+  height: 2.5em;
 }
 .banner:after {
   content: "";
@@ -132,37 +156,39 @@ p, h1, h2, h3 {
 
 .brandsbar {
   text-align: center;
+  justify-content: center;
   width: 100%;
+}
+.brandsbar img {
+  width: 55em;
 }
 .brandsbar h2 {
   color: #131820;
-  padding-top: 25px;
+  padding-top: 1.25em;
   font-weight: bold;
 }
 
 .subscription {
-  position: relative;
   color: #131820;
   width: 100%;
+  display: grid;
+  grid-template-columns: 25em 25em;
+  justify-content: center;
+  gap: 4em;
 }
 .subscription .description {
-  position: absolute;
-  font-size: 40px;
+  justify-content: center;
+  font-size: 2em;
   font-family: calibri;
-  top: 150px;
-  left: 170px;
-  width: 500px;
+  padding-top: 2.5em;
+  width: 10em;
 }
 .subscription p {
-  position: absolute;
-  font-size: 15px;
+  font-size: 0.35em;
   color: grey;
-  top: 150px;
 }
 .subscription img {
-  float: right;
-  padding-top: 40px;
-  padding-right: 150px;
+  width: 25em;
 }
 .subscription button {
   background-color: rgb(19, 24, 32);
@@ -182,24 +208,10 @@ p, h1, h2, h3 {
 
 .steps {
   color: #131820;
-  width: 80%;
-  margin-left: 12%;
-}
-.steps ul {
   width: 100%;
 }
-.steps li {
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  float: left;
-  width: 33%;
-}
-.steps li {
-  text-align: left;
-}
 .steps p {
-  font-size: 15px;
+  font-size: 0.75em;
   color: grey;
 }
 .steps h1 {
@@ -214,15 +226,17 @@ p, h1, h2, h3 {
 .steps h2 {
   font-weight: bold;
 }
-.steps:after {
-  content: "";
-  display: block;
-  clear: both;
+
+.step {
+  display: grid;
+  grid-template-columns: 17em 17em 17em;
+  justify-content: center;
 }
 
 .topseller {
   text-align: center;
   align-items: center;
+  justify-content: center;
   color: #131820;
   font-family: calibri;
   width: 100%;
@@ -237,13 +251,25 @@ p, h1, h2, h3 {
   float: left;
   width: 33%;
 }
+.topseller .first {
+  background-color: rgb(200, 212, 205);
+}
+.topseller .second {
+  background-color: rgb(244, 231, 210);
+}
+.topseller .third {
+  background-color: rgb(197, 228, 251);
+}
 .topseller h1 {
-  padding-top: 25px;
-  font-size: 40px;
+  padding-top: 1.25em;
+  font-size: 2em;
   text-align: center;
 }
 .topseller .topsellers {
-  padding-right: 140px;
+  display: grid;
+  grid-template-columns: 15em 15em 15em;
+  justify-content: center;
+  gap: 2.5em;
 }
 .topseller li {
   float: right;
@@ -254,16 +280,23 @@ p, h1, h2, h3 {
   border-radius: 2mm;
 }
 .topseller p {
-  font-size: 15px;
+  font-size: 0.55em;
   color: grey;
 }
 .topseller button {
   background-color: white;
-  width: 200px;
+  width: 10em;
   height: 35px;
   border-radius: 1mm;
   font-weight: bold;
   border: none;
+  margin-bottom: 0.5em;
+}
+.topseller img {
+  width: 7.5em;
+}
+.topseller .pink {
+  width: 9em;
 }
 .topseller:after {
   content: "";
@@ -276,42 +309,35 @@ p, h1, h2, h3 {
   width: 100%;
   font-family: calibri;
 }
+.middle .advantages {
+  display: grid;
+  grid-template-columns: 12em 12em 12em 12em;
+  justify-content: center;
+  gap: 2.5em;
+}
+.middle .adv {
+  border: 1px solid rgb(190, 190, 190);
+  border-radius: 2mm;
+  padding-top: 0.5em;
+}
 .middle h1 {
   padding-top: 25px;
-  font-size: 40px;
+  font-size: 2em;
   color: #131820;
   text-align: center;
 }
 .middle img {
-  width: 50px;
+  width: 3em;
   border: 1px solid rgb(190, 190, 190);
   border-radius: 2mm;
 }
-.middle ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
 .middle p {
-  font-size: 15px;
+  font-size: 0.75em;
   color: grey;
 }
 .middle h2 {
   padding-top: 25px;
   font-weight: bolder;
-}
-.middle li {
-  border: 1px solid rgb(190, 190, 190);
-  border-radius: 2mm;
-  display: inline-block;
-  width: 200px;
-  height: 170px;
-  margin: 0 30px;
-  padding: 25px 10px;
-}
-.middle li:hover {
-  background-color: rgb(2, 11, 19);
-  color: white;
 }
 
 .questions {
@@ -320,20 +346,20 @@ p, h1, h2, h3 {
 }
 .questions h1 {
   padding-top: 25px;
-  font-size: 40px;
+  font-size: 2em;
   color: #131820;
 }
 .questions p {
-  font-size: 15px;
+  font-size: 0.75em;
   color: grey;
 }
 .questions button {
   background-color: lavenderblush;
   font-family: calibri;
   color: rgb(19, 24, 32);
-  font-size: 18px;
+  font-size: 0.9em;
   font-weight: bold;
-  padding: 15px;
+  padding: 0.75em;
   width: 80%;
   border: none;
   text-align: left;
@@ -343,27 +369,27 @@ p, h1, h2, h3 {
   background-color: #ffd1e1;
 }
 .questions .ans {
-  width: 79.5%;
-  height: 50px;
+  width: 53.6em;
+  height: 2.5em;
   display: none;
   background-color: #ffd1e1;
-  margin-left: 135px;
   text-align: left;
-  padding-left: 7px;
+  margin-left: 6.77em;
+  padding-left: 0.4em;
 }
 
 .comments {
   text-align: left;
   width: 20%;
-  padding-left: 140px;
+  padding-left: 7em;
 }
 .comments h1 {
   padding-top: 25px;
-  font-size: 40px;
+  font-size: 2em;
   color: #131820;
 }
 .comments p {
-  font-size: 15px;
+  font-size: 0.75em;
   color: grey;
 }
 .comments button {
@@ -373,8 +399,8 @@ p, h1, h2, h3 {
   color: white;
   font-family: calibri;
   font-weight: bold;
-  width: 100px;
-  height: 30px;
+  width: 7em;
+  height: 1.5em;
 }
 
 .footer {
@@ -384,11 +410,11 @@ p, h1, h2, h3 {
 }
 
 .petqo {
-  padding-top: 10px;
+  padding-top: 0.5em;
   display: flex;
   justify-content: space-between;
   width: 80%;
-  padding-left: 115px;
+  padding-left: 5.75em;
   border-bottom: 1px solid #343434;
 }
 .petqo p {
@@ -396,7 +422,7 @@ p, h1, h2, h3 {
 }
 
 .midbot {
-  padding-left: 115px;
+  padding-left: 5.75em;
   color: white;
   border-bottom: 1px solid #343434;
 }
@@ -411,8 +437,23 @@ p, h1, h2, h3 {
   width: 33%;
 }
 .midbot li {
-  width: 20%;
+  width: 18.5%;
   text-align: left;
+}
+.midbot input {
+  border-radius: 5mm;
+  background-color: rgb(33, 33, 44);
+  border: none;
+  width: 10em;
+  height: 1em;
+  padding: 0.25em;
+}
+.midbot button {
+  border: none;
+  border-radius: 5mm;
+  color: #131820;
+  padding: 0.25em;
+  width: 5em;
 }
 .midbot:after {
   content: "";
@@ -422,16 +463,168 @@ p, h1, h2, h3 {
 
 .contact {
   display: flex;
+  background-color: rgba(240, 255, 255, 0.247);
+  border-radius: 2mm;
+  width: 7.5em;
+  margin: 0.25em;
+  padding: 0.25em;
+}
+.contact a {
+  font-size: 0.55em;
 }
 
 .copyrights {
-  padding-top: 10px;
+  padding-top: 0.5em;
   display: flex;
   justify-content: space-between;
   width: 80%;
-  padding-left: 115px;
+  padding-left: 5.75em;
   border-bottom: 1px solid #343434;
 }
 .copyrights p {
   color: grey;
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 15px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 900px) {
+  body {
+    font-size: 12px;
+    width: 100%;
+  }
+  .main-nav {
+    width: 100%;
+  }
+  .banner {
+    height: 300px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 8px;
+  }
+  .main-nav {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-nav ul {
+    width: 100%;
+  }
+  .main-nav li {
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    float: left;
+    width: 33%;
+  }
+  .main-nav .mainul {
+    display: flex;
+    justify-content: space-between;
+  }
+  .main-nav .rightnav {
+    display: none;
+  }
+  .main-nav .midnav {
+    display: none;
+    align-items: center;
+  }
+  .main-nav .dropdown button {
+    display: block;
+    width: 5em;
+    height: 2em;
+  }
+  .banner {
+    text-align: center;
+    height: 300px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  .banner img {
+    display: none;
+  }
+  .banner .brand {
+    text-align: center;
+  }
+  .brandsbar {
+    text-align: center;
+    width: 100%;
+  }
+  .brandsbar h2 {
+    width: 80%;
+    padding-right: 15px;
+  }
+  .brandsbar img {
+    width: 100%;
+  }
+  .subscription {
+    height: 500px;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+  .subscription img {
+    display: none;
+  }
+  .subscription .description {
+    width: 50%;
+  }
+  .steps {
+    width: 100%;
+    text-align: center;
+  }
+  .steps li {
+    width: 245px;
+  }
+  .topseller {
+    width: 100%;
+  }
+  .topseller li {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .topseller .topsellers {
+    display: inline;
+  }
+  .topseller .first {
+    background-color: white;
+  }
+  .topseller .second {
+    background-color: white;
+  }
+  .topseller .third {
+    background-color: white;
+  }
+  .topseller button {
+    color: antiquewhite;
+  }
+  .middle {
+    width: 100%;
+  }
+  .subscription {
+    display: flex;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    padding-bottom: 20px;
+  }
+  .advantages {
+    display: contents;
+  }
+  .comments button {
+    font-size: 5px;
+    width: 50px;
+  }
+  .questions .ans {
+    margin-left: 45px;
+    width: 79%;
+  }
 }/*# sourceMappingURL=styles.css.map */
